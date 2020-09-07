@@ -1,0 +1,44 @@
+/* 公共样式 */
+*{
+    margin: 0;padding: 0;
+}
+ol,ul,li{   
+    list-style: none;
+}
+input,button{
+    border: none;
+    outline: none;
+}
+.fL{
+    float: left;
+}
+.fR{
+    float: right;
+}
+.mL5{
+    margin-left: 5px;
+}
+.mL10{
+    margin-left: 10px;
+}
+.mL20{
+    margin-left: 20px;
+}
+.mR5{
+    margin-right: 5px;
+}
+.pL10{
+    padding-left: 10px;
+}
+.pR10{
+    padding-right: 10px;
+}
+.mT10{
+    margin-top: 10px;
+}
+.mT15{
+    margin-top: 15px;
+}
+.mT20{
+    margin-top: 20px;
+}

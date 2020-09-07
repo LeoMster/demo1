@@ -1,0 +1,123 @@
+/* 底部栏样式 */
+.footer{
+    height: 350px;
+    width: 1440px;
+    border-top: 1px solid #EEEEEE;
+    margin-top: 40px;
+}
+.footer-part1{
+    width: 1196px;
+    height: 100px;
+    margin: 0 122px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.footer-part1 ul li{
+    display: block;
+    float: left;
+    width: 25%;
+    height: 100px;
+}
+.footer-part1-p1{
+    font-size: 20px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #222222;
+}
+.footer-part1-p2{
+    font-size: 14px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #555555;
+}
+.footer-sec2{
+    height: 48px;
+    margin-top: 26px;
+}
+.footer-part2{
+    width: 1196px;
+    height: 200px;
+    margin: 0 122px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.footer-ul{
+    display: block;
+    float: left;
+    margin-left: 180px;
+}
+.footer-ul li{
+    font-size: 12px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #555555;
+}
+.footer-ul li:nth-child(1){
+    font-size: 16px;
+    font-family: NotoSansSC-Medium, NotoSansSC;
+    font-weight: 500;
+    color: #555555;
+    margin: 20px 0 20px 0;
+}
+.footer-part2-left ul:nth-child(1){
+    margin-left: 0;
+}
+.footer-part2-right{
+    margin-top: 34px;
+    height: 132px;
+    width: 300px;
+    border-left: 1px solid #EEEEEE;
+    margin-left: 50px;
+}
+.footer-part2-right img{
+    margin: 30px 0 0 20px;
+}
+.footer-part2-right p:nth-child(1){
+    font-size: 16px;
+    font-family: NotoSansSC-Medium, NotoSansSC;
+    font-weight: 500;
+    color: #666666;
+}
+.footer-part2-right p:nth-child(2){
+    font-size: 24px;
+    font-family: Tahoma-Bold, Tahoma;
+    font-weight: bold;
+    color: #31B3EC;
+}
+.footer-part2-right p:nth-child(3){
+    font-size: 12px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #555555;
+}
+.footer-part2-sec{
+    margin: 30px 40px 0 0;
+}
+.footer-part3{
+    height: 60px;
+}
+.footer-part3-p1{
+    display: block;
+    width: 500px;
+    height: 20px;
+    font-size: 12px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #555555;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 15px;
+}
+.footer-part3-p2{
+    width: 800px;
+    font-size: 12px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #999999;
+    margin: 0 auto;
+}
+.footer-part3-p2-span2{
+    margin: 5px 0 0 10px;
+}
+.footer-part3-p2-span3{
+    margin: 5px 0 0 30px;
+}

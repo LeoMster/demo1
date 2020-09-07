@@ -1,0 +1,227 @@
+/* 商品导航条样式 */
+.body-container{
+    min-height: 680px;
+}
+.body-nav{
+    min-height: 40px;
+    background: #FAFAFA;
+    min-width: 1196px;
+    padding: 0 122px;
+}
+.body-nav-left{
+    min-height: 40px;
+}
+.body-nav-span,.body-nav-i{
+    line-height: 40px;
+    font-size: 12px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #999999;
+}
+.body-nav-left span:last-child{
+    color: #555555;
+}
+.body-nav-right{
+    min-height: 40px;
+}
+.icon-style{
+    color: #31B3EC;
+}
+/* 商品信息左侧大图小图样式 */
+.body-msg{
+    min-width: 1196px;
+    padding: 0 122px;
+}
+.body-msg-left-big{
+    width: 450px;
+    min-height: 450px; 
+    border: 1px solid #EEEEEE;
+}
+.body-msg-left-small{
+    width: 450px;
+    min-height: 60px; 
+}
+.banner-icon-style{
+    min-height: 60px;
+    line-height: 60px;
+    color: #D8d8d8;
+}
+.body-msg-nav{
+    width: 450px;
+    font-size: 12px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #555555;
+}
+.body-msg-nav-i,.body-msg-nav-span{
+    min-height: 20px;
+    line-height: 20px;
+}
+/* 商品右侧信息样式 */
+.body-msg-right-container{
+    overflow: hidden;
+}
+.body-msg-right-title{
+    font-size: 16px;
+    font-family: NotoSans-Bold, NotoSans;
+    font-weight: bold;
+    color: #222222;
+}
+.body-msg-right-isChuan{
+    display: block;
+    min-width: 36px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid #24B648;
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #42B570;
+    text-align: center;
+    line-height: 16px;
+    margin-top: 2px;
+    padding: 0 2px;
+}
+.body-msg-right-info{
+    min-width: 300px;
+    font-size: 12px;
+    font-family: NotoSans;
+    color: #31B3EC;
+    margin-top: 26px;
+}
+.body-msg-right-price{
+    min-width: 700px;
+    height: 150px;
+    background: #FAFAFA;
+    overflow: hidden;
+}
+.body-msg-right-price-inner{
+    width: 664px;
+    height: 130px;
+    margin: 5px auto;
+}
+.body-msg-right-price-span{
+    display: block;
+    width: 100%;
+}
+.body-msg-right-price-title{
+    font-size: 12px;
+    font-family: MicrosoftYaHei;
+    color: #999999;
+}
+.price-color{
+    font-size: 24px;
+    font-family: Tahoma-Bold, Tahoma;
+    font-weight: bold;
+    color: #D11670;
+    margin: -2px 40px 0 12px;
+}
+.body-msg-right-price-info{
+    font-size: 12px;
+    font-family: NotoSans;
+    color: #555555;
+}
+.body-msg-right-price-name{
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FF3D3D;
+    border-radius: 2px;
+    border: 1px solid #FF3D3D;
+    padding: 1px 2px;
+    margin-top: -2px;
+}
+.net-sec,.diy-sec,.type-sec,.memory-sec,.color-sec{
+    width: 100%;
+    height: 30px;
+}
+.netUl li{
+    width: 120px;
+    height: 22px;
+}
+.diyUl li{
+    width: 40px;
+    height: 22px;
+}
+.typeUl li{
+    width: 40px;
+    height: 22px;
+}
+.memoryUl li{
+    width: 40px;
+    height: 22px;
+}
+.colorUl li{
+    width: 40px;
+    height: 22px;
+}
+.body-msg-right-container li{
+    float: left;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #CECECE;
+    font-size: 12px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #222222;
+    text-align: center;
+    line-height: 22px;
+}
+.numUl li{
+    width: 12px;
+    height: 22px;
+    margin: 0 0;
+}
+.numUl li:nth-child(2){
+    width: 28px;
+    border-left: none;
+    border-right: none;
+}
+.numUl li:nth-child(1){
+    margin-left: 5px;
+}
+.num-span{
+    font-size: 12px;
+    font-family: NotoSans;
+    color: #555555;
+}
+.care-sec{
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FF3D3D;
+}
+.body-btn{
+    margin-left: 420px;
+    height: 42px;
+}
+.body-btn input{
+    display: block;
+    width: 140px;
+    height: 42px;
+    float: left;
+    margin: 10px 10px 0 10px;
+}
+.body-btn1{
+    background: #D11670;
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+.body-btn2{
+    background: #31B3EC;
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+.body-btn3{
+    height: 40px;width: 138px;
+    border: 1px solid #31B3EC;
+    font-size: 16px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #31B3EC;
+    background: #FFFFFF;
+}

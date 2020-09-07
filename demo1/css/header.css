@@ -1,0 +1,100 @@
+/* 顶部导航栏样式 */
+.header-nav{
+    min-width: 1196px;
+    min-height: 30px;
+    background: #F9F9F9;
+    padding: 0 122px;
+}
+.header-nav-left,.header-nav-right{
+    min-height: 30px;
+}
+.header-nav-left span,i{
+    display: block;
+    min-height: 30px;
+    line-height: 30px;
+}
+.icon-style{
+    color: #31B3EC;
+}
+.header-nav-font{
+    font-size: 12px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #555555;
+}
+.header-nav-right li{
+    min-height: 10px;
+    padding:0px 8px;
+    margin: 10px 0;
+    float: left;
+    border-right: 1px solid #555555;
+}
+.header-nav-right li:last-child{
+    border-right: none;
+}
+.header-nav-right i,span{
+    display: block;
+    min-height: 10px;
+    line-height: 10px;
+    float: left;
+}
+
+/* logo及搜索框样式 */
+.header-logo-search{
+    min-width: 1196px;
+    min-height: 110px;
+    background: #FFFFFF;
+    padding: 0 122px;
+}
+.header-logo{
+    min-height: 110px;
+    position: relative;
+}
+.header-logo img{
+    margin: auto;  
+    position: absolute;  
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0; 
+}
+.header-search{
+    min-height: 110px;
+    position: relative;
+}
+.header-search span{
+    display: block;
+    min-height: 42px;
+    line-height: 42px;
+    font-size: 16px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #222222;
+}
+.header-search i{
+    display: block;
+    min-height: 42px;
+    line-height: 42px;
+    border-right: 1px solid #EEEEEE;
+}
+.header-search-ipt{
+    min-height: 42px;
+    min-width: 450px;
+    font-size: 16px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+}
+.header-search-btn{
+    min-width: 109px;
+    min-height: 42px;
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+    background: #31B3EC;
+}
+.header-search-container{
+    min-height: 42px;
+    border: 2px solid #31B3EC;
+    margin-top: 32px;
+}

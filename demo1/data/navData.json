@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Twest1218",
+        "isLeftIcon": false,
+        "isRightIcon": true
+    },
+    {
+        "title": "客户服务",
+        "isLeftIcon": false,
+        "isRightIcon": true
+    },
+    {
+        "title": "手机版",
+        "isLeftIcon": true,
+        "icon": "icon-phone-android",
+        "isRightIcon": false
+    },
+    {
+        "title": "微信公众号",
+        "isLeftIcon": false,
+        "isRightIcon": false
+    }
+]

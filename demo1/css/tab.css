@@ -1,0 +1,107 @@
+/* tab页 */
+.body-tab-nav{
+    width: 1196px;
+    height: 42px;
+    margin: 0 122px;
+    background: #F5F5F5;
+}
+.body-tab-content{
+    width: 1196px;
+    height: 190px;
+    margin: 0 122px;
+    border: 1px solid #EEEEEE;
+    position: relative;
+}
+.body-tab-img{
+    width: 1196px;
+    margin: 0 122px;
+    border: 1px solid #EEEEEE;
+    border-top: 0;
+}
+.body-tab-img1,.body-tab-img2{
+    display: block;
+    margin: 0 auto;
+}
+.body-tab-img1{
+    width: 750px;
+    height: 1761px;
+}
+.body-tab-img2{
+    width: 750px;
+    height: 1147px;
+}
+.body-tab-img2{
+    width: 750px;
+    height: 1761px;
+}
+.body-tab-nav li{
+    display: block;
+    float: left;
+    width: 120px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    font-size: 14px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #555555;
+}
+.active{
+    background: #31B3EC;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+.body-tab-nav li:nth-child(1){
+    background: #31B3EC;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+.body-tab-content ul{
+    display: block;
+    float: left;
+    margin: 45px 0 0 100px;
+}
+.body-tab-content ul:nth-child(1){
+    margin: 10px 0 0 0;
+}
+.body-tab-content ul li{
+    display: block;
+    height: 35px;
+}
+.body-tab-content ul li span{
+    line-height: 35px;
+}
+.body-tab-content ul li span:nth-child(1){
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+.body-tab-sp1{
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #999999;
+}
+.body-tab-sp2{
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #222222;
+}
+.body-content-right-bottom{
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #555555;
+    margin-right: 20px;
+}
