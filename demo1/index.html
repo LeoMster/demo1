@@ -18,7 +18,7 @@
             <!-- 地区 -->
             <section class="header-nav-left fL">
                 <i class="iconfont icon-icon-room icon-style fL"></i>
-                <span class="header-nav-font fL mL5">北京</span>
+                <span class="header-nav-font fL mL5 cursor">北京</span>
             </section>
             <!-- 导航 -->
             <section class="header-nav-right fR">
@@ -28,14 +28,14 @@
         <section class="header-logo-search">
             <!-- logo -->
             <section class="header-logo fL">
-                <img src="./images/logo.gif" alt="logo">
+                <img src="./images/logo.gif" alt="logo" class="cursor">
             </section>
             <!-- 搜索框 -->
             <section class="header-search fR">
                 <section class="header-search-container">
-                    <button class="header-search-btn fR">搜索</button>
+                    <button class="header-search-btn fR cursor">搜索</button>
                     <section class="fR">
-                        <span class="fL pL10">商品</span>
+                        <span class="fL pL10 cursor">商品</span>
                         <i class='iconfont icon-keyboard-arrow-down fL mL5 mR5 pR10'></i>
                         <input class="header-search-ipt fL" type="search" name="" id="" placeholder="输入商品名称">
                     </section>
@@ -50,18 +50,18 @@
         <nav class="body-nav">
             <!-- 标题 -->
             <section class="body-nav-left fL">
-                <span class="body-nav-span fL">首页</span>
+                <span class="body-nav-span fL cursor">首页</span>
                 <i class="iconfont icon-keyboard-arrow-right body-nav-i pL10 pR10 fL"></i>
-                <span class="body-nav-span fL">手机</span>
+                <span class="body-nav-span fL cursor">手机</span>
                 <i class="iconfont icon-keyboard-arrow-right body-nav-i pL10 pR10 fL"></i>
-                <span class="body-nav-span fL">小米（MI）红米5</span>
+                <span class="body-nav-span fL cursor">小米（MI）红米5</span>
             </section>
             <!-- 右侧导航项 -->
             <section class="body-nav-right fR">
                 <i class="iconfont icon-icon-store body-nav-i icon-style fL"></i>
-                <span class="body-nav-span fL mL5">北京终端公司</span>
+                <span class="body-nav-span fL mL5 cursor">北京终端公司</span>
                 <i class="iconfont icon-chart body-nav-i icon-style fL pL10 mL5"></i>
-                <span class="body-nav-span fL mL5">商家</span>
+                <span class="body-nav-span fL mL5 cursor">商家</span>
             </section>
         </nav>
         <!-- 商品信息 -->
@@ -69,19 +69,32 @@
             <!-- 左侧大图部分 -->
             <section class="body-msg-left-container mT20 fL">
                 <!-- 大图 -->
-                <section class="body-msg-left-big"></section>
+                <section class="body-msg-left-big">
+                    <section class="small cursor">
+                        <img class="small-img" src="./images/bgImg.jpg" width="450" height="450" alt="">
+                        <span class="mask"></span>
+                    </section>
+                    <section class="big">
+                        <img class="big-img" src="./images/bgImg.jpg" width="900" height="900" alt="">
+                    </section>
+                </section>
                 <!-- 小图 -->
                 <section class="body-msg-left-small mT10">
-                    <i class="iconfont icon-bimenhutubiao_icon_banner_l banner-icon-style"></i>
+                    <i class="iconfont icon-bimenhutubiao_icon_banner_l banner-icon-style cursor fL mR10 left-icon"></i>
+                    <img class="bo-small-img" src="./images/small01.png" width="60" height="60" alt="">
+                    <img class="bo-small-img" src="./images/bgImg.jpg" width="60" height="60" alt="">
+                    <img class="bo-small-img" src="./images/small03.jpg" width="60" height="60" alt="">
+                    <img class="bo-small-img" src="./images/small04.jpg" width="60" height="60" alt="">
+                    <img class="bo-small-img" src="./images/small05.jpg" width="60" height="60" alt="">                   
                 </section>
                 <!-- 收藏分享对比 -->
                 <section class="body-msg-nav mT10">
                     <i class="iconfont icon-favorite-border body-msg-nav-i fL"></i>
-                    <span class="body-msg-nav-span fL mL5">收藏</span>
+                    <span class="body-msg-nav-span fL mL5 cursor">收藏</span>
                     <i class="iconfont icon-sharepx body-msg-nav-i fL pL10 mL5"></i>
-                    <span class="body-msg-nav-span fL mL5">分享</span>
+                    <span class="body-msg-nav-span fL mL5 cursor">分享</span>
                     <i class="iconfont icon-swap-horiz body-msg-nav-i fL pL10 mL5"></i>
-                    <span class="body-msg-nav-span fL mL5">对比</span>
+                    <span class="body-msg-nav-span fL mL5 cursor">对比</span>
                 </section>
             </section>
             <!-- 右侧商品选择部分 -->
@@ -98,11 +111,11 @@
 
     <!-- tab -->
     <section class="body-tab">
-        <section class="body-tab-nav"></section>
+        <section class="body-tab-nav-box body-tab-nav"></section>
         <section class="body-tab-content"></section>
         <section class="body-tab-img">
-            <img class="body-tab-img1" src="" alt="">
-            <img class="body-tab-img2" src="" alt="">
+            <img class="body-tab-img1" src="./images/bg1.jpg" alt="">
+            <img class="body-tab-img2" src="./images/bg2.jpg" alt="">
         </section>
     </section>
 
@@ -162,7 +175,7 @@
             </section>
         </section>
         <section class="footer-part3">
-            <p class="footer-part3-p1">公司简介  |  企业文化 |  法律声明  |  联系我们  |   网站地图  |  营业执照 </p>
+            <p class="footer-part3-p1 cursor">公司简介  |  企业文化 |  法律声明  |  联系我们  |   网站地图  |  营业执照 </p>
             <p class="footer-part3-p2">
                 <span class="footer-part3-p2-span1"><img src="./images/font-1yEqRP20.png" alt=""></span>
                 <span class="footer-part3-p2-span2">粤ICP备12066907号 | 中国移动通信版权所有</span>
@@ -178,6 +191,7 @@
     <script src="js/body.js"></script>
     <script src="js/tab.js"></script>
     <script src="js/footer.js"></script>
+    <script src="js/mirror.js"></script>
     <script>
         $(function(){
             headerFun.setNavList('data/navData.json','header-nav-right');
@@ -185,6 +199,9 @@
             tabFun.setTabNav('data/msgData.json','body-tab-nav');
             tabFun.setTab('data/msgData.json','body-tab-content');
             footerFun.setFooter('data/footerData.json','footer-part2-left');
+            mirror.setMirror('body-msg-left-big','big','small','mask','big-img','small-img');
+            mirror.changeImg('small-img','big-img','bo-small-img');
+            mirror.leftBtnClick('left-icon','small-img','big-img','bo-small-img');
         });
     </script>
 </body>

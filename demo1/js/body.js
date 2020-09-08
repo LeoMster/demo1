@@ -1,4 +1,5 @@
 var bodyFun = (function(){
+    var index = 0;
     /**
      * 对fetch请求的封装用于获取数据
      * @param {string} url 数据请求地址
@@ -64,7 +65,7 @@ var bodyFun = (function(){
             <ul class="diyUl">${diyStr}</ul>
         </section>`;
         
-        var typeStr = setUl(result[0].type,'diyUl');
+        var typeStr = setUl(result[0].type,'typeUl');
         type = `<section class="type-sec mT20">
             <span class="body-msg-right-price-title mL10 mT10 mR5">采购类型</span>
             <ul class="typeUl">${typeStr}</ul>
@@ -76,7 +77,7 @@ var bodyFun = (function(){
             <ul class="memoryUl">${memoryStr}</ul>
         </section>`;
         
-        var colorStr = setUl(result[0].color,'memoryUl');
+        var colorStr = setUl(result[0].color,'colorUl');
         color = `<section class="color-sec mT20">
             <span class="body-msg-right-price-title mL10 mT10 mR5">&emsp;&emsp;颜色</span>
             <ul class="colorUl">${colorStr}</ul>
@@ -85,9 +86,9 @@ var bodyFun = (function(){
         var num = `<section class="color-sec mT20">
             <span class="body-msg-right-price-title mL10 mT10 mR5">选择数量</span>
             <ul class="numUl">
-                <li>-</li>
-                <li>0</li>
-                <li>+</li>
+                <li class="cursor dec-btn">-</li>
+                <li class="num-btn">0</li>
+                <li class="cursor add-btn">+</li>
             </ul>
             <span class="num-span mT10 mL10">${result[0].allNum}</span>
         </section>`;
@@ -98,17 +99,57 @@ var bodyFun = (function(){
         </section>`
         tag = title + isChuan + info + price + net + diy + type + memory + color + num + care;
         $(`.${className}`).html(tag);
+
+        setSelected('netUl-li');
+        setSelected('diyUl-li');
+        setSelected('typeUl-li');
+        setSelected('memoryUl-li');
+        setSelected('colorUl-li');
+        changeNum('add-btn','dec-btn','num-btn','100');
     }
     /**
      * 生成列表
      * @param {array} arr 接口里面的数组数据
      */
-    function setUl(arr){
+    function setUl(arr,className){
         var str = '';
         for(var i = 0;i < arr.length;i++){
-            str += `<li>${arr[i]}</li>`
+            str += `<li class='${className}-li cursor'>${arr[i]}</li>`
         }
+
         return str;
+    }
+
+    function setSelected(className){
+        $($(`.${className}`)[0]).css('border','1px solid #31B3EC').addClass('check-box').css('box-shadow','0 0 0 1px #31B3EC');
+        for(var i = 0;i < $(`.${className}`).length;i++){
+            $($(`.${className}`)[i]).on('click',function(){
+                for(var j = 0;j < $(`.${className}`).length;j++){
+                    $($(`.${className}`)[j]).css('border','1px solid #CECECE').removeClass('check-box').css('box-shadow','0 0 0 0 #31B3EC');
+                }
+                $(this).css('border','1px solid #31B3EC').addClass('check-box').css('box-shadow','0 0 0 1px #31B3EC');
+            })
+        }
+    }
+
+    function changeNum(add,dec,num,max){
+        $(`.${add}`).on('click',function(){
+            if(index === Number(max)){
+                $(`.${num}`).html(index);
+            }else{
+                index++;
+                $(`.${num}`).html(index);
+            }
+        });
+        
+        $(`.${dec}`).on('click',function(){
+            if(index === 0){
+                $(`.${num}`).html(index)
+            }else{
+                index--;
+                $(`.${num}`).html(index);
+            }
+        });
     }
 
     return {

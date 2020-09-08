@@ -27,7 +27,7 @@ var headerFun = (function(){
             if(result[i].isLeftIcon){
                 tmpStr += `<i class='iconfont ${result[i].icon} icon-style mR5'></i>`
             } 
-            tmpStr += `<span>${result[i].title}</span>`;
+            tmpStr += `<span class="cursor">${result[i].title}</span>`;
             if(result[i].isRightIcon){
                 tmpStr += `<i class='iconfont icon-keyboard-arrow-down mL5'></i>`
             }

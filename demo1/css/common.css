@@ -4,6 +4,7 @@
 }
 ol,ul,li{   
     list-style: none;
+    user-select: none;
 }
 input,button{
     border: none;
@@ -27,6 +28,9 @@ input,button{
 .mR5{
     margin-right: 5px;
 }
+.mR10{
+    margin-right: 10px;
+}
 .pL10{
     padding-left: 10px;
 }
@@ -41,4 +45,7 @@ input,button{
 }
 .mT20{
     margin-top: 20px;
+}
+.cursor{
+    cursor: pointer;
 }
