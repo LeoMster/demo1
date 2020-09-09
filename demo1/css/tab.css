@@ -4,6 +4,7 @@
     height: 42px;
     margin: 0 122px;
     background: #F5F5F5;
+    border-bottom: 1px solid #31B3EC;
 }
 .body-tab-content{
     width: 1196px;
@@ -47,13 +48,6 @@
     color: #555555;
 }
 .active{
-    background: #31B3EC;
-    font-size: 14px;
-    font-family: PingFangSC-Regular, PingFang SC;
-    font-weight: 400;
-    color: #FFFFFF;
-}
-.body-tab-nav li:nth-child(1){
     background: #31B3EC;
     font-size: 14px;
     font-family: PingFangSC-Regular, PingFang SC;
@@ -104,4 +98,114 @@
     font-weight: 400;
     color: #555555;
     margin-right: 20px;
+}
+.tab-msg-title{
+    font-size: 12px;
+    font-family: NotoSans-Bold, NotoSans;
+    font-weight: bold;
+    color: #555555;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+}
+.tab-msg-name{
+    display: block;
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #999999;
+}
+.tab-msg-content{  
+    margin-left: 14px;
+    display: block;
+    font-size: 12px;
+    font-family: NotoSans;
+    color: #222222;
+}
+.tab-msg-li{
+    width: 1192px;
+    height: 20px;
+    margin: 0 0 10px 0;
+    padding-left: 238px;
+}
+.tab-msg-li span{
+    display: block;
+    height: 20px;
+    line-height: 20px;
+}
+
+.tab-li-container{
+    width: 1192px;
+    height: auto;
+    border-bottom: 1px solid #EEEEEE;
+    position: relative;
+}
+.tab-li-container li span{
+    margin-top: -5px;
+}
+.tab-title-sec{
+    width: 1174px;
+    height: 40px;
+    background: #FAFAFA;
+    border: 1px solid #EEEEEE;
+    line-height: 40px;
+    font-size: 14px;
+    font-family: NotoSans;
+    color: #666666;
+    padding-left: 20px;
+    border-left: 2px solid #31B3EC;
+}
+.setUl2-span-name{
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #999999;
+}
+.setUl2-span-content{ 
+    font-size: 12px;
+    font-family: NotoSans;
+    color: #222222;
+}
+.setUl2-container{
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.setUl2-li{
+    height: 20px;
+}
+.setUl2-li span{
+    line-height: 20px;
+}
+.setUl2-container li:last-child{
+    margin-bottom: 50px;
+}
+.setUl4-p{
+    font-size: 12px;
+    font-family: NotoSans;
+    color: #222222;
+    margin: 10px 0 10px 20px;
+}
+.setUl3-container{
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #222222;
+}
+.setUl3-container-p{
+    font-size: 14px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #31B3EC;
+    margin-top: 20px;
+}
+.setUl3-container p{
+    margin-left: 20px;
+}
+.setUl3-container2-p{
+    margin: 20px 0 0 0;
+}
+.setUl3-container2-p2{
+    margin: 0 0 20px 0;
 }
