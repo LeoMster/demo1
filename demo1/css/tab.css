@@ -4,13 +4,14 @@
     height: 42px;
     margin: 0 122px;
     background: #F5F5F5;
+    border: 1px solid #EEEEEE;
     border-bottom: 1px solid #31B3EC;
 }
 .body-tab-content{
     width: 1196px;
     height: 190px;
     margin: 0 122px;
-    border: 1px solid #EEEEEE;
+    /* border: 1px solid #EEEEEE; */
     position: relative;
 }
 .body-tab-img{
@@ -139,12 +140,14 @@
     height: auto;
     border-bottom: 1px solid #EEEEEE;
     position: relative;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
 }
 .tab-li-container li span{
     margin-top: -5px;
 }
 .tab-title-sec{
-    width: 1174px;
+    width: 1172px;
     height: 40px;
     background: #FAFAFA;
     border: 1px solid #EEEEEE;
@@ -171,6 +174,8 @@
     height: auto;
     margin-bottom: 20px;
     border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
 }
 .setUl2-li{
     height: 20px;
@@ -209,3 +214,4 @@
 .setUl3-container2-p2{
     margin: 0 0 20px 0;
 }
+

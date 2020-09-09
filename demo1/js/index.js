@@ -1,0 +1,9 @@
+$(function(){
+    headerFun.setNavList('data/navData.json','header-nav-right');
+    bodyFun.setShopMsg('data/shopData.json','body-msg-right-container');
+    tabFun.setTabNav('data/msgData.json','body-tab-nav','body-tab-content');
+    footerFun.setFooter('data/footerData.json','footer-part2-left');
+    mirror.setMirror('body-msg-left-big','big','small','mask','big-img','small-img');
+    mirror.changeImg('small-img','big-img','bo-small-img');
+    mirror.leftBtnClick('left-icon','small-img','big-img','bo-small-img');
+});

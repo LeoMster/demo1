@@ -110,15 +110,17 @@ var tabFun = (function(){
 
     function setUl5(content){
         var title = `<section class="tab-title-sec mT20" id="baojia">报价</section>`;
-        var str = `<img src="${content}" width='auto' height='290' />`;
+        var str = `<img src="${content}" width='1150' height='290' />`;
 
         return '<section class="setUl2-container">' + title + str + '</section>';
     }
     
     function setUl6(content){
         var title = `<section class="tab-title-sec mT20" id="pingjia">评论</section>`;
-
-        return '<section class="setUl2-container">' + title + '</section>';
+        var content = `<section class="user-content"></section>`
+        var pageStr = `<section class="page"></section>`;
+        
+        return '<section class="setUl2-container page-container">' + title + content + pageStr + '</section>';
     }
 
     async function setTab(result,className,id){
@@ -133,6 +135,7 @@ var tabFun = (function(){
                 tag = intro1 + intro2 + intro3 + intro4 + `<span class="body-content-right-bottom mR5">更多参数><span>`;
                 $('.body-tab-img').css('display','block');
                 $('.body-tab-content').css('height','190px');
+                $('.body-tab-content').css('border','1px solid #EEEEEE');
                 $(`.${className}`).html(tag);
                 scrollTop(0);
                 break;
@@ -140,6 +143,7 @@ var tabFun = (function(){
                 var tag1 = setUl1(result[1].content);
                 $('.body-tab-img').css('display','none');
                 $('.body-tab-content').css('height','auto');
+                $('.body-tab-content').css('border','none');
 
                 var tag2 = setUl2(result[2].content);
                 var tag3 = setUl3(result[3].content);
@@ -150,11 +154,26 @@ var tabFun = (function(){
                 var tag = tag1 + tag2 + tag4 + tag3 + tag5 + tag6;
                 $(`.${className}`).html(tag);
                 scrollTop(0);
+                initPage(
+                    {
+                        prev: '<|>',
+                        count: 10,
+                        selector: '.page',
+                        current: 1,
+                        page_len: 5,
+                        color: '#1E9FFF',
+                        callBack: function(page){
+                            callBackFun(page,result[6].content);
+                        }
+                    }
+                );
+                callBackFun(1,result[6].content);
                 break;
             case 2:
                 var tag1 = setUl1(result[1].content);
                 $('.body-tab-img').css('display','none');
                 $('.body-tab-content').css('height','auto');
+                $('.body-tab-content').css('border','none');
 
                 var tag2 = setUl2(result[2].content);
                 var tag3 = setUl3(result[3].content);
@@ -166,11 +185,26 @@ var tabFun = (function(){
 
                 $(`.${className}`).html(tag);
                 scrollTop(2);
+                initPage(
+                    {
+                        prev: '<|>',
+                        count: 10,
+                        selector: '.page',
+                        current: 1,
+                        page_len: 5,
+                        color: '#1E9FFF',
+                        callBack: function(page){
+                            callBackFun(page,result[6].content);
+                        }
+                    }
+                );
+                callBackFun(1,result[6].content);
                 break;
             case 3:
                 var tag1 = setUl1(result[1].content);
                 $('.body-tab-img').css('display','none');
                 $('.body-tab-content').css('height','auto');
+                $('.body-tab-content').css('border','none');
 
                 var tag2 = setUl2(result[2].content);
                 var tag3 = setUl3(result[3].content);
@@ -182,11 +216,26 @@ var tabFun = (function(){
 
                 $(`.${className}`).html(tag);
                 scrollTop(3);
+                initPage(
+                    {
+                        prev: '<|>',
+                        count: 10,
+                        selector: '.page',
+                        current: 1,
+                        page_len: 5,
+                        color: '#1E9FFF',
+                        callBack: function(page){
+                            callBackFun(page,result[6].content);
+                        }
+                    }
+                );
+                callBackFun(1,result[6].content);
                 break;
             case 4:
                 var tag1 = setUl1(result[1].content);
                 $('.body-tab-img').css('display','none');
                 $('.body-tab-content').css('height','auto');
+                $('.body-tab-content').css('border','none');
 
                 var tag2 = setUl2(result[2].content);
                 var tag3 = setUl3(result[3].content);
@@ -198,11 +247,26 @@ var tabFun = (function(){
 
                 $(`.${className}`).html(tag);
                 scrollTop(4);
+                initPage(
+                    {
+                        prev: '<|>',
+                        count: 10,
+                        selector: '.page',
+                        current: 1,
+                        page_len: 5,
+                        color: '#1E9FFF',
+                        callBack: function(page){
+                            callBackFun(page,result[6].content);
+                        }
+                    }
+                );
+                callBackFun(1,result[6].content);
                 break;
             case 5:
                 var tag1 = setUl1(result[1].content);
                 $('.body-tab-img').css('display','none');
                 $('.body-tab-content').css('height','auto');
+                $('.body-tab-content').css('border','none');
 
                 var tag2 = setUl2(result[2].content);
                 var tag3 = setUl3(result[3].content);
@@ -214,11 +278,26 @@ var tabFun = (function(){
 
                 $(`.${className}`).html(tag);
                 scrollTop(5);
+                initPage(
+                    {
+                        prev: '<|>',
+                        count: 10,
+                        selector: '.page',
+                        current: 1,
+                        page_len: 5,
+                        color: '#1E9FFF',
+                        callBack: function(page){
+                            callBackFun(page,result[6].content);
+                        }
+                    }
+                );
+                callBackFun(1,result[6].content);
                 break;
             case 6:
                 var tag1 = setUl1(result[1].content);
                 $('.body-tab-img').css('display','none');
                 $('.body-tab-content').css('height','auto');
+                $('.body-tab-content').css('border','none');
 
                 var tag2 = setUl2(result[2].content);
                 var tag3 = setUl3(result[3].content);
@@ -229,11 +308,94 @@ var tabFun = (function(){
                 var tag = tag1 + tag2 + tag4 + tag3 + tag5 + tag6;
 
                 $(`.${className}`).html(tag);
+                initPage(
+                    {
+                        prev: '<|>',
+                        count: 10,
+                        selector: '.page',
+                        current: 1,
+                        page_len: 5,
+                        color: '#1E9FFF',
+                        callBack: function(page){
+                            callBackFun(page,result[6].content);
+                        }
+                    }
+                );
+                callBackFun(1,result[6].content);
                 scrollTop(6);
                 break;
+        }  
+    }
+
+    function callBackFun(page,data){
+        var min = (page-1)*10 + 1,str = '';
+        if(data.length < min){
+            var arr = [];
+        }else{
+            var arr = data.slice((page-1)*10,(page-1)*10 + 10);
         }
 
-        
+        for(var i = 0;i < arr.length;i++){
+            str += `<li class="user-li">
+                <section class="fL user-left">
+                    <span><img class="user-img mL10" src="${arr[i].head}" width="25" height="25"/></span>
+                    <span class="user-pick">${arr[i].pickName}</span>
+                </section>
+                <section class="fL user-mid">
+                    <p>
+                        <span class="star-container">
+                            <span class="user-star">物流速度</span>
+                            <span class="stars ${arr[i].star[0]}">
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                            </span>
+                        </span>
+                        <span class="star-container">
+                            <span class="user-star">商品质量</span>
+                            <span class="stars ${arr[i].star[1]}">
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                            </span>
+                        </span>
+                        <span class="star-container">
+                            <span class="user-star">售后服务</span>
+                            <span class="stars ${arr[i].star[2]}">
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                            </span>
+                        </span>
+                        <span >
+                            <span class="user-star">督导服务</span>
+                            <span class="stars ${arr[i].star[3]}">
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                                <i class="iconfont icon-starpx fL"></i>
+                            </span>
+                        </span>
+                    </p>
+                    <p class="user-text">
+                        ${arr[i].text}
+                    </p>
+                </section>
+                <section class="fR user-right">
+                    <p class="user-time">${arr[i].time}</p>
+                </section>
+            </li>`
+        }
+
+        // console.log($('.user-content'));
+        $('.user-content').html(str);
     }
 
     function scrollTop(id){
@@ -269,6 +431,97 @@ var tabFun = (function(){
                 );
                 break;
         }
+    }
+
+    function initPage(options){
+        var opt = options;
+        var str = createTemplate(opt);
+        var s = `
+            <section class="zui-page">
+                ${str}
+            </section>
+        `;
+        $(`${options.selector}`).html(s);
+        pagingClick(opt);
+    }   
+
+    function createTemplate(options){
+        var t_arr = options.prev.split('|');
+        var f     = options.page_len,i,b = '',c,str;
+
+        if(f - options.current <= 2 && options.count - options.current >= (f - 3)){
+            c = (f - 1 - 2) / 2,i = -c;
+            while(i <= c){
+                i == 0 ? b += '<a data-page="curr" style="background-color: '+ options.color +';" class="zui-page-curr">' + (options.current) + '</a>' : b += '<a data-page=' + (+options.current + i) + '>' + (+options.current + i) + '</a>';
+                i++;
+            }
+            str = `
+                <a data-page="prev">${t_arr[0]}</a>
+                <a data-page="1">1</a>
+                <a data-page="mid" class="zui-page-spr">…</a>
+                ${b}
+                <a data-page="mid" class="zui-page-spr">…</a>
+                <a data-page="${options.count}">${options.count}</a>
+                <a data-page="next">${t_arr[1]}</a>
+            `;
+        }else if(0 < options.current && options.current <= (f - 3)){
+            i = 1;
+            while(i <= (f - 2)){
+                i == +options.current ? b += '<a data-page="curr" style="background-color: '+ options.color +';" class="zui-page-curr">' + (i) + '</a>' : b += '<a  data-page=' + (i) + '>' + (i) + '</a>';
+                i++;
+            }
+            str = `
+                <a data-page="prev" class="zui-page-noallow">${t_arr[0]}</a>
+                ${b}
+                <a data-page="mid" class="zui-page-spr">…</a>
+                <a data-page="${options.count}">${options.count}</a>
+                <a  data-page="next">${t_arr[1]}</a>
+            `;
+        }else if((options.count - (f - 3)) < options.current && options.current <= options.count){
+            i = (f - 2) - 1;
+            while (i >= 0) {
+                options.count - i == options.current ? b += '<a  style="background-color: '+ options.color +';" class="zui-page-curr">' + (options.count - i) + '</a>' : b += '<a  data-page=' + (options.count - i) + '>' + (options.count - i) + '</a>';
+                i--;
+            }
+            str = `
+                <a data-page="prev">${t_arr[0]}</a>
+                <a data-page="1">1</a>
+                <a data-page="mid" class="zui-page-spr">…</a>
+                ${b}
+                <a data-page="next" class="zui-page-noallow">${t_arr[1]}</a>
+            `;
+        }
+
+        return str;
+    }
+
+    function pagingClick(options){
+        $(`${options.selector}`).on('click','a',function(e){
+            var page = $(this).attr('data-page');
+            if(page != 'curr' && page != 'mid'){
+                if(page == 'prev'){
+                    if(!$(this).attr('class')){
+                        options.current--;
+                        options.callBack(options.current);
+                        $(`${options.selector}`).find('.zui-page').html(createTemplate(options));
+                    }else if($(this).attr('class').indexOf('zui-page-noallow') != -1){
+                        return;
+                    }
+                }else if(page == 'next'){
+                    if(!$(this).attr('class')){
+                        options.current++;
+                        options.callBack(options.current);
+                        $(`${options.selector}`).find('.zui-page').html(createTemplate(options));
+                    }else if($(this).attr('class').indexOf('zui-page-noallow') != -1){
+                        return;
+                    }
+                }else{
+                    options.callBack(page);
+                    options.current = page;
+                    $(`${options.selector}`).find('.zui-page').html(createTemplate(options));
+                }
+            }
+        });
     }
 
     return {

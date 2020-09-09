@@ -1,0 +1,109 @@
+.zui-page{
+    font: 0px / 22px "Helvetica Neue", Helvetica, "PingFang SC", Tahoma, Arial, sans-serif;
+    padding: 0px;
+    box-sizing: content-box;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0px;
+    text-align: left !important;
+    user-select: none;
+}
+.zui-page-noallow{
+    color: rgb(210, 210, 210);
+    cursor: not-allowed;
+}
+.zui-page a{
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0 10px 0 0 ;
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    font-size: 12px;
+    border: 1px solid rgb(226, 226, 226);
+}
+.zui-page-curr{
+    background-color: #31B3EC;
+    color: #fff !important;
+}
+.page-container{
+    position: relative;
+    min-height: 100px;
+}
+.page{
+    position: absolute;
+    bottom: 0;right: 0;
+}
+.user-li{
+    display: block;
+    height: 90px;
+    width: auto;
+    margin: 0 10px 0 10px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.user-pick{
+    font-size: 14px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #555555;
+    margin: 28px 0 0 15px;
+}
+.user-text{
+    font-size: 14px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #222222;
+    margin-top: 25px;
+}
+.user-time{
+    font-size: 12px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #999999;
+    margin: 20px 20px 0 0;
+}
+.user-star{
+    font-size: 12px;
+    font-family: NotoSansSC-Regular, NotoSansSC;
+    font-weight: 400;
+    color: #555555;
+}
+.user-mid{
+    margin: 25px 0 0 80px;
+}
+.user-img{
+    margin-top: 20px;
+}
+.stars{
+    margin: -10px 5px 0 10px;
+}
+.star-container{
+    margin-right: 30px;
+}
+.user-mid i{
+    color: #EEEEEE;
+    font-size: 12px;
+}
+.five i{
+    color: #31B3EC;
+}
+.four i{
+    color: #31B3EC;
+}
+.four i:last-child{
+    color: #EEEEEE;
+}
+.three i{
+    color: #31B3EC;
+}
+.three i:last-child{
+    color: #EEEEEE;
+}
+.three i:nth-child(4){
+    color: #EEEEEE;
+}

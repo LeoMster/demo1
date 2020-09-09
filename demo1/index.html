@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/body.css">
     <link rel="stylesheet" href="./css/tab.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/page.css">
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 </head>
 <body>
@@ -192,17 +193,6 @@
     <script src="js/tab.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/mirror.js"></script>
-    <script>
-        $(function(){
-            headerFun.setNavList('data/navData.json','header-nav-right');
-            bodyFun.setShopMsg('data/shopData.json','body-msg-right-container');
-            tabFun.setTabNav('data/msgData.json','body-tab-nav','body-tab-content');
-            // tabFun.setTab('data/msgData.json','body-tab-content');
-            footerFun.setFooter('data/footerData.json','footer-part2-left');
-            mirror.setMirror('body-msg-left-big','big','small','mask','big-img','small-img');
-            mirror.changeImg('small-img','big-img','bo-small-img');
-            mirror.leftBtnClick('left-icon','small-img','big-img','bo-small-img');
-        });
-    </script>
+    <script src="js/index.js"></script>
 </body>
 </html>
