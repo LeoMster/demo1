@@ -2,6 +2,11 @@
 *{
     margin: 0;padding: 0;
 }
+body{
+    overflow-x: hidden;
+    height: auto;
+    margin: 0 auto;
+}
 ol,ul,li{   
     list-style: none;
     user-select: none;

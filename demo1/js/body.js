@@ -6,6 +6,9 @@ var bodyFun = (function(){
      * @returns {object} 返回一个promise对象
      */
     function getData(url){
+        // return $.get(url, function(result){
+        //     console.log(result);
+        // });
         return new Promise((resolve,reject) => {
             fetch(url)
                 .then(res => res.json())
@@ -152,7 +155,37 @@ var bodyFun = (function(){
         });
     }
 
+    function getShop(className){
+        var str = [
+            {"name": "终端制式","content": ""},
+            {"name": "定制类型","content": ""},
+            {"name": "采购类型","content": ""},
+            {"name": "内存","content": ""},
+            {"name": "颜色","content": ""},
+            {"name": "数量","content": ""}
+        ];
+        $(`.${className}`).on('click',function(){
+            for(var i = 0;i < $(".check-box").length;i++ ){
+                str[i].content = $($(".check-box")[i]).html();
+            }
+            str[$(".check-box").length].content = $('.num-btn').html();
+            console.log(str);
+        });
+
+        // fetch(url,{
+        //     method: "POST",
+        //     body: JSON.stringify(str),
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     }
+        // })
+        //     .then(res => res.json())
+        //     .then(data => console.log('data'));
+    }
+
+    
     return {
-        setShopMsg: setShopMsg
+        setShopMsg: setShopMsg,
+        getShop: getShop
     };
 })();

@@ -53,8 +53,7 @@
                     "name": "老人机配置：",
                     "info": "智能机（老龄模式）"
                 }
-            ],
-            "images": []
+            ]
         }
     },
     {
@@ -267,7 +266,7 @@
     },
     {
         "name": "报价",
-        "content": "images/tongji.jpg"
+        "content": ""
     },{
         "name": "评价",
         "content": [
@@ -279,60 +278,89 @@
                 "time": "2019-02-13  17:23:13"
             },{
                 "head": "images/head.png",
-                "pickName": "灰鲤...与驴",
-                "star": ["five","three","four","three"],
-                "text": "这里是用户填写的文字评价",
+                "pickName": "哈哈哈",
+                "star": ["five","four","four","four"],
+                "text": "不错",
                 "time": "2019-02-13  17:23:13"
             },{
                 "head": "images/head.png",
-                "pickName": "灰鲤...与驴",
-                "star": ["five","three","four","three"],
-                "text": "这里是用户填写的文字评价",
+                "pickName": "乐乐",
+                "star": ["three","three","four","three"],
+                "text": "挺好的",
                 "time": "2019-02-13  17:23:13"
             },{
                 "head": "images/head.png",
-                "pickName": "灰鲤...与驴",
-                "star": ["five","three","four","three"],
-                "text": "这里是用户填写的文字评价",
+                "pickName": "丽丽",
+                "star": ["five","three","four","five"],
+                "text": "还可以",
                 "time": "2019-02-13  17:23:13"
             },{
                 "head": "images/head.png",
-                "pickName": "灰鲤...与驴",
-                "star": ["five","three","four","three"],
-                "text": "这里是用户填写的文字评价",
+                "pickName": "小丁",
+                "star": ["three","three","three","three"],
+                "text": "态度好",
                 "time": "2019-02-13  17:23:13"
             },{
                 "head": "images/head.png",
-                "pickName": "灰鲤...与驴",
-                "star": ["five","three","four","three"],
-                "text": "这里是用户填写的文字评价",
+                "pickName": "西西",
+                "star": ["four","three","four","four"],
+                "text": "用起来很顺畅",
                 "time": "2019-02-13  17:23:13"
             },{
                 "head": "images/head.png",
-                "pickName": "灰鲤...与驴",
+                "pickName": "master",
                 "star": ["five","three","four","three"],
-                "text": "这里是用户填写的文字评价",
+                "text": "很棒",
                 "time": "2019-02-13  17:23:13"
             },{
                 "head": "images/head.png",
-                "pickName": "灰鲤...与驴",
+                "pickName": "风",
                 "star": ["five","three","four","three"],
-                "text": "这里是用户填写的文字评价",
+                "text": "用一段时间再说",
                 "time": "2019-02-13  17:23:13"
             },{
                 "head": "images/head.png",
-                "pickName": "灰鲤...与驴",
-                "star": ["five","three","four","three"],
-                "text": "这里是用户填写的文字评价",
+                "pickName": "the sky",
+                "star": ["five","five","five","three"],
+                "text": "完美",
                 "time": "2019-02-13  17:23:13"
             },{
                 "head": "images/head.png",
-                "pickName": "灰鲤...与驴",
-                "star": ["five","three","four","three"],
-                "text": "这里是用户填写的文字评价",
+                "pickName": "baby",
+                "star": ["three","five","four","five"],
+                "text": "没有让人失望",
+                "time": "2019-02-13  17:23:13"
+            },{
+                "head": "images/head.png",
+                "pickName": "小南",
+                "star": ["five","five","five","three"],
+                "text": "物流很快",
+                "time": "2019-02-13  17:23:13"
+            },{
+                "head": "images/head.png",
+                "pickName": "NNNNNNN",
+                "star": ["five","three","four","four"],
+                "text": "售后服务很好",
+                "time": "2019-02-13  17:23:13"
+            },{
+                "head": "images/head.png",
+                "pickName": "233333",
+                "star": ["three","three","four","three"],
+                "text": "一般般",
+                "time": "2019-02-13  17:23:13"
+            },{
+                "head": "images/head.png",
+                "pickName": "美丽人生",
+                "star": ["five","five","five","five"],
+                "text": "下次还会回购",
+                "time": "2019-02-13  17:23:13"
+            },{
+                "head": "images/head.png",
+                "pickName": "突突突突",
+                "star": ["four","four","four","three"],
+                "text": "感觉还是很好的",
                 "time": "2019-02-13  17:23:13"
             }
         ]
     }
-    
 ]

@@ -1,4 +1,6 @@
 var tabFun = (function(){
+    // 第一次进入页面不进行自动定位
+    var login = false;
     /**
      * 对fetch请求的封装用于获取数据
      * @param {string} url 数据请求地址
@@ -13,34 +15,39 @@ var tabFun = (function(){
                 })
         })
     }
-
+    /** 
+     * 拿到数据后渲染导航条及相对应的内容
+     * @param {string} url 数据请求地址
+     * @param {string} className1 导航条容器的类名
+     * @param {string} className2 每一个页的内容的容器的类名
+    */
     async function setTabNav(url,className1,className2){
         var result = await getData(url);
-        
         var str = '';
         for(var i = 0;i < result.length;i++){
             str += `<li class="tab-nav-li cursor" id="${i}">${result[i].name}</li>`;
         }
-
+        // 渲染导航条
         $(`.${className1}`).html(str);
-
+        // 初始化第一项为选中状态
         $($('.tab-nav-li')[0]).addClass('active').css('color','#FFFFFF');
+        // 初始化渲染第一项的内容
         setTab(result,className2,0);
+        // 每一项点击时状态和内容切换
         for(var j = 0;j < $('.tab-nav-li').length;j++){
             (function(k){
                 $($('.tab-nav-li')[k]).on('click',function(){
+                    if(k === 0){
+                        login = true;
+                    }
                     for(var n = 0;n < $('.tab-nav-li').length;n++){
                         $($('.tab-nav-li')[n]).removeClass('active').css('color','#555555');
                     }
-    
                     $(this).addClass('active').css('color','#FFFFFF');
-
                     setTab(result,className2,k);
                 })
             })(j);
         }
-
-        scrollTop();
     }
 
     function setUl0(introduct){
@@ -110,7 +117,7 @@ var tabFun = (function(){
 
     function setUl5(content){
         var title = `<section class="tab-title-sec mT20" id="baojia">报价</section>`;
-        var str = `<img src="${content}" width='1150' height='290' />`;
+        var str = `<section id="echarts-container" style="height: 300px;width: 1200px;"></section>`;
 
         return '<section class="setUl2-container">' + title + str + '</section>';
     }
@@ -121,6 +128,66 @@ var tabFun = (function(){
         var pageStr = `<section class="page"></section>`;
         
         return '<section class="setUl2-container page-container">' + title + content + pageStr + '</section>';
+    }
+
+
+    function setEcharts(id){
+        var myEchars = echarts.init(document.getElementById(id));
+        var option = {
+    
+            tooltip: {
+                trigger: 'axis'
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                data: ['7-30', '8-17', '9-02', '9-18', '10-04', '10-20', '11-05'],
+                axisLine:{
+                    lineStyle:{
+                        color:'#999999'
+                    }
+                } 
+            },
+            yAxis: {
+                type: 'value',
+                min: 800,
+                max: 1300,
+                axisLine:{
+                    lineStyle:{
+                        color:'#999999'
+                    }
+                } 
+            },
+            series: [
+                {
+                    name: 'Step Start',
+                    type: 'line',
+                    step: 'start',
+                    data: [1250,1250,1080,1100,1020,1020,1020,999],
+                    itemStyle: {
+                        normal: {
+                            color:'#1890FF',
+                            label: {
+                                color:'red',
+                                borderColor: '#FFF',
+                            },
+                            lineStyle:{
+                              color:'#31B3EC'
+                            }
+                        }
+                    }
+                }
+            ]
+        };
+        
+        if(option && typeof option === "object"){
+            myEchars.setOption(option,true);
+        }
     }
 
     async function setTab(result,className,id){
@@ -137,7 +204,9 @@ var tabFun = (function(){
                 $('.body-tab-content').css('height','190px');
                 $('.body-tab-content').css('border','1px solid #EEEEEE');
                 $(`.${className}`).html(tag);
-                scrollTop(0);
+                if(login){
+                    scrollTop(0);
+                }
                 break;
             case 1:
                 var tag1 = setUl1(result[1].content);
@@ -167,6 +236,7 @@ var tabFun = (function(){
                         }
                     }
                 );
+                setEcharts('echarts-container');
                 callBackFun(1,result[6].content);
                 break;
             case 2:
@@ -198,6 +268,7 @@ var tabFun = (function(){
                         }
                     }
                 );
+                setEcharts('echarts-container');
                 callBackFun(1,result[6].content);
                 break;
             case 3:
@@ -229,6 +300,7 @@ var tabFun = (function(){
                         }
                     }
                 );
+                setEcharts('echarts-container');
                 callBackFun(1,result[6].content);
                 break;
             case 4:
@@ -260,6 +332,7 @@ var tabFun = (function(){
                         }
                     }
                 );
+                setEcharts('echarts-container');
                 callBackFun(1,result[6].content);
                 break;
             case 5:
@@ -291,6 +364,7 @@ var tabFun = (function(){
                         }
                     }
                 );
+                setEcharts('echarts-container');
                 callBackFun(1,result[6].content);
                 break;
             case 6:
@@ -321,6 +395,7 @@ var tabFun = (function(){
                         }
                     }
                 );
+                setEcharts('echarts-container');
                 callBackFun(1,result[6].content);
                 scrollTop(6);
                 break;
@@ -394,10 +469,13 @@ var tabFun = (function(){
             </li>`
         }
 
-        // console.log($('.user-content'));
         $('.user-content').html(str);
     }
 
+    /**
+     * 通过scollTop的更改来定位内容
+     * @param {id} 该按钮的id
+     */
     function scrollTop(id){
         switch(id){
             case 0:
@@ -521,6 +599,8 @@ var tabFun = (function(){
                     $(`${options.selector}`).find('.zui-page').html(createTemplate(options));
                 }
             }
+
+            scrollTop(6);
         });
     }
 

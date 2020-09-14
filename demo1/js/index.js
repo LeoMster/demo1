@@ -6,4 +6,6 @@ $(function(){
     mirror.setMirror('body-msg-left-big','big','small','mask','big-img','small-img');
     mirror.changeImg('small-img','big-img','bo-small-img');
     mirror.leftBtnClick('left-icon','small-img','big-img','bo-small-img');
+    bodyFun.getShop('body-btn2');
+    $('body').css('width',`${window.screen.width}`);
 });

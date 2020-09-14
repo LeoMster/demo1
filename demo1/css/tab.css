@@ -11,7 +11,6 @@
     width: 1196px;
     height: 190px;
     margin: 0 122px;
-    /* border: 1px solid #EEEEEE; */
     position: relative;
 }
 .body-tab-img{
@@ -136,7 +135,7 @@
 }
 
 .tab-li-container{
-    width: 1192px;
+    width: 1196px;
     height: auto;
     border-bottom: 1px solid #EEEEEE;
     position: relative;
@@ -147,7 +146,7 @@
     margin-top: -5px;
 }
 .tab-title-sec{
-    width: 1172px;
+    width: 1174px;
     height: 40px;
     background: #FAFAFA;
     border: 1px solid #EEEEEE;
@@ -170,7 +169,7 @@
     color: #222222;
 }
 .setUl2-container{
-    width: auto;
+    width: 1196px;
     height: auto;
     margin-bottom: 20px;
     border-bottom: 1px solid #EEEEEE;
@@ -213,5 +212,9 @@
 }
 .setUl3-container2-p2{
     margin: 0 0 20px 0;
+}
+#echarts-container{
+    margin-top: -10px;
+    margin-bottom: 20px;
 }
 

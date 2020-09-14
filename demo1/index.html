@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="./css/tab.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/page.css">
+    <link rel="stylesheet" href="./css/aside.css">
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <!-- <script src="browser.min.js"></script> -->
 </head>
 <body>
     <!-- 顶部栏 -->
@@ -186,8 +188,22 @@
     </footer>
 
     <!-- 右侧导航栏 -->
-    <aside></aside>
+    <aside class="aside-container">
+        <i class="iconfont icon-icon-account-box ab cursor" style="color: #999999;"></i>
+        <i class="iconfont icon-shopping-cart sc cursor" style="color: #999999;"></i>
+        <p class="cursor">购</p>
+        <p class="cursor">物</p>
+        <p class="cursor">车</p>
+        <p id="shop-number" class="cursor">0</p>
+        <i class="iconfont icon-favorite-border cursor mT20" style="color: #999999;"></i>
+        <i class="iconfont icon-headset-mic cursor " style="color: #999999;"></i>
+        <i class="iconfont icon-icon-message cursor mT20" style="color: #999999;"></i>
+        <i class="iconfont icon-questionnaire cursor" style="color: #999999;"></i>
+        <i class="iconfont icon-icon-up cursor" style="color: #999999;"></i>
+    </aside>
 
+    
+    <script src="https://lib.baomitu.com/echarts/4.6.0/echarts.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/body.js"></script>
     <script src="js/tab.js"></script>
