@@ -200,12 +200,14 @@
     bottom: 80px;
     right: 370px;
 }
-.body-btn input{
+.body-btn span{
     display: block;
     width: 140px;
     height: 42px;
     float: left;
     margin: 10px 10px 0 10px;
+    line-height: 42px;
+    text-align: center;
 }
 .body-btn1{
     background: #D11670;

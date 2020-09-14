@@ -485,27 +485,27 @@ var tabFun = (function(){
                 break;
             case 2:
                 $("html,body").animate(
-                    {scrollTop: $("#youhui").offset().top},{duration: 500,easing: "swing"}
+                    {scrollTop: $("#youhui").offset().top - 42},{duration: 500,easing: "swing"}
                 );
                 break;
             case 3:
                 $("html,body").animate(
-                    {scrollTop: $("#fuwu").offset().top},{duration: 500,easing: "swing"}
+                    {scrollTop: $("#fuwu").offset().top - 42},{duration: 500,easing: "swing"}
                 );
                 break;
             case 4:
                 $("html,body").animate(
-                    {scrollTop: $("#baozhuang").offset().top},{duration: 500,easing: "swing"}
+                    {scrollTop: $("#baozhuang").offset().top - 42},{duration: 500,easing: "swing"}
                 );
                 break;
             case 5:
                 $("html,body").animate(
-                    {scrollTop: $("#baojia").offset().top},{duration: 500,easing: "swing"}
+                    {scrollTop: $("#baojia").offset().top - 42},{duration: 500,easing: "swing"}
                 );
                 break;
             case 6:
                 $("html,body").animate(
-                    {scrollTop: $("#pingjia").offset().top},{duration: 500,easing: "swing"}
+                    {scrollTop: $("#pingjia").offset().top - 42},{duration: 500,easing: "swing"}
                 );
                 break;
         }
