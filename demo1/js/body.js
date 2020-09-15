@@ -5,25 +5,27 @@ var bodyFun = (function(){
      * @param {string} url 数据请求地址
      * @returns {object} 返回一个promise对象
      */
-    function getData(url){
-        // return $.get(url, function(result){
-        //     console.log(result);
-        // });
-        return new Promise((resolve,reject) => {
-            fetch(url)
-                .then(res => res.json())
-                .then(data => {
-                    resolve(data);
-                })
-        })
+    function getData(url,callback){
+        return $.get(url, function(result){
+            callback(result);
+        });
+        // return new Promise((resolve,reject) => {
+        //     fetch(url)
+        //         .then(res => res.json())
+        //         .then(data => {
+        //             resolve(data);
+        //         })
+        // })
     }
     /**
      * 渲染导航条
      * @param {string} url 数据请求地址
      * @param {string} className 类名
      */
-    async function setShopMsg(url,className){
-        var result = await getData(url);
+    function setShopMsg(url,className){
+        // var data  = await getData(url);
+        var data = getData(url,function(res){
+        var result = res;
 
         var title,isChuan='',tag,info,price,net,type,color;
         title = `<section class="body-msg-right-title fL">${result[0].name}</section>`;
@@ -109,6 +111,8 @@ var bodyFun = (function(){
         setSelected('memoryUl-li');
         setSelected('colorUl-li');
         changeNum('add-btn','dec-btn','num-btn','100');
+        
+        });
     }
     /**
      * 生成列表

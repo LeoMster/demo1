@@ -4,22 +4,28 @@ var headerFun = (function(){
      * @param {string} url 数据请求地址
      * @returns {object} 返回一个promise对象
      */
-    function getData(url){
-        return new Promise((resolve,reject) => {
-            fetch(url)
-                .then(res => res.json())
-                .then(data => {
-                    resolve(data);
-                })
-        })
+    function getData(url,callback){
+        return $.get(url, function(result){
+            callback(result);
+        });
+        // return new Promise((resolve,reject) => {
+        //     fetch(url)
+        //         .then(res => res.json())
+        //         .then(data => {
+        //             resolve(data);
+        //         })
+        // })
     }
     /**
      * 渲染导航条
      * @param {string} url 数据请求地址
      * @param {string} className 类名
      */
-    async function setNavList(url,className){
-        var result = await getData(url);
+    function setNavList(url,className){
+        // var result = await getData(url);
+        var data = getData(url,function(res){
+        var result = res;
+        
         
         var str = '';
         for(var i = 0;i < result.length;i++){
@@ -36,6 +42,8 @@ var headerFun = (function(){
         }
 
         $(`.${className}`).html(str);
+
+        });
     }
 
     return {

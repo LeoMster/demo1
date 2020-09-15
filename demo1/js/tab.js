@@ -6,14 +6,17 @@ var tabFun = (function(){
      * @param {string} url 数据请求地址
      * @returns {object} 返回一个promise对象
      */
-    function getData(url){
-        return new Promise((resolve,reject) => {
-            fetch(url)
-                .then(res => res.json())
-                .then(data => {
-                    resolve(data);
-                })
-        })
+    function getData(url,callback){
+        return $.get(url, function(result){
+            callback(result);
+        });
+        // return new Promise((resolve,reject) => {
+        //     fetch(url)
+        //         .then(res => res.json())
+        //         .then(data => {
+        //             resolve(data);
+        //         })
+        // })
     }
     /** 
      * 拿到数据后渲染导航条及相对应的内容
@@ -21,33 +24,38 @@ var tabFun = (function(){
      * @param {string} className1 导航条容器的类名
      * @param {string} className2 每一个页的内容的容器的类名
     */
-    async function setTabNav(url,className1,className2){
-        var result = await getData(url);
-        var str = '';
-        for(var i = 0;i < result.length;i++){
-            str += `<li class="tab-nav-li cursor" id="${i}">${result[i].name}</li>`;
-        }
-        // 渲染导航条
-        $(`.${className1}`).html(str);
-        // 初始化第一项为选中状态
-        $($('.tab-nav-li')[0]).addClass('active').css('color','#FFFFFF');
-        // 初始化渲染第一项的内容
-        setTab(result,className2,0);
-        // 每一项点击时状态和内容切换
-        for(var j = 0;j < $('.tab-nav-li').length;j++){
-            (function(k){
-                $($('.tab-nav-li')[k]).on('click',function(){
-                    if(k === 0){
-                        login = true;
-                    }
-                    for(var n = 0;n < $('.tab-nav-li').length;n++){
-                        $($('.tab-nav-li')[n]).removeClass('active').css('color','#555555');
-                    }
-                    $(this).addClass('active').css('color','#FFFFFF');
-                    setTab(result,className2,k);
-                })
-            })(j);
-        }
+    function setTabNav(url,className1,className2){
+        // var result = await getData(url);
+        getData(url,function(res){
+            var result = res;
+            
+            var str = '';
+            for(var i = 0;i < result.length;i++){
+                str += `<li class="tab-nav-li cursor" id="${i}">${result[i].name}</li>`;
+            }
+            // 渲染导航条
+            $(`.${className1}`).html(str);
+            // 初始化第一项为选中状态
+            $($('.tab-nav-li')[0]).addClass('active').css('color','#FFFFFF');
+            // 初始化渲染第一项的内容
+            setTab(result,className2,0);
+            // 每一项点击时状态和内容切换
+            for(var j = 0;j < $('.tab-nav-li').length;j++){
+                (function(k){
+                    $($('.tab-nav-li')[k]).on('click',function(){
+                        if(k === 0){
+                            login = true;
+                        }
+                        for(var n = 0;n < $('.tab-nav-li').length;n++){
+                            $($('.tab-nav-li')[n]).removeClass('active').css('color','#555555');
+                        }
+                        $(this).addClass('active').css('color','#FFFFFF');
+                        setTab(result,className2,k);
+                    })
+                })(j);
+            }
+
+        });
     }
 
     function setUl0(introduct){
