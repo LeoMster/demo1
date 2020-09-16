@@ -194,11 +194,10 @@
     color: #FF3D3D;
 }
 .body-btn{
-    margin-left: 420px;
     height: 42px;
     position: absolute;
     bottom: 80px;
-    right: 370px;
+    right: 470px;
 }
 .body-btn span{
     display: block;

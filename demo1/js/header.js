@@ -23,7 +23,7 @@ var headerFun = (function(){
      */
     function setNavList(url,className){
         // var result = await getData(url);
-        var data = getData(url,function(res){
+        getData(url,function(res){
         var result = res;
         
         
@@ -31,17 +31,17 @@ var headerFun = (function(){
         for(var i = 0;i < result.length;i++){
             var tmpStr = '';
             if(result[i].isLeftIcon){
-                tmpStr += `<i class='iconfont ${result[i].icon} icon-style mR5'></i>`
+                tmpStr += '<i class="iconfont ' + result[i].icon + ' ' + 'icon-style' + ' ' + 'mR5' + '"></i>'
             } 
-            tmpStr += `<span class="cursor">${result[i].title}</span>`;
+            tmpStr += '<span class="cursor">' + result[i].title + '</span>';
             if(result[i].isRightIcon){
-                tmpStr += `<i class='iconfont icon-keyboard-arrow-down mL5'></i>`
+                tmpStr += '<i class="iconfont icon-keyboard-arrow-down mL5"></i>'
             }
             
-            str += `<li class='header-nav-font'>${tmpStr}</li>` 
+            str += '<li class="header-nav-font">' + tmpStr + '</li>'
         }
 
-        $(`.${className}`).html(str);
+        $('.' + className).html(str);
 
         });
     }

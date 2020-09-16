@@ -7,5 +7,5 @@ $(function(){
     mirror.changeImg('small-img','big-img','bo-small-img');
     mirror.leftBtnClick('left-icon','small-img','big-img','bo-small-img');
     bodyFun.getShop('body-btn2');
-    $('body').css('width',`${window.screen.width}`);
+    $('body').css('width',window.screen.width);
 });

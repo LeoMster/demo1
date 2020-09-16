@@ -20,13 +20,13 @@ var footerFun = (function(){
     function setUl(result){
         var str = '';
         for(var i = 0;i < result.length;i++){
-            str += `<li>
-                ${result[i]}
-            </li>`;
+            str += '<li>'
+            +  result[i]
+            +'</li>';
         }
-        var tag = `<ul class="footer-ul">
-            ${str}
-        </ul>`;
+        var tag = '<ul class="footer-ul">'
+        + str
+        +'</ul>';
 
         return tag;
     }
@@ -43,7 +43,7 @@ var footerFun = (function(){
 
             var str = list1 + list2 + list3 +list4;
 
-            $(`.${classname}`).html(str);
+            $('.' + classname).html(str);
         
         });
     }

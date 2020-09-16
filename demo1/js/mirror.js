@@ -2,12 +2,12 @@ var mirror = (function(){
     var index = 1;
 
     function setMirror(container,big,small,mask,bigImg,smallImg){
-        var container   = $(`.${container}`),
-            big         = $(`.${big}`),
-            small       = $(`.${small}`),
-            mask        = $(`.${mask}`),
-            bigImg      = $(`.${bigImg}`),
-            smallImg    = $(`.${smallImg}`);
+        var container   = $('.' + container),
+            big         = $('.' + big),
+            small       = $('.' + small),
+            mask        = $('.' + mask),
+            bigImg      = $('.' + bigImg),
+            smallImg    = $('.' + smallImg);
 
         // 移动距离
         var maxW = smallImg.innerWidth() - mask.outerWidth(),
@@ -41,38 +41,38 @@ var mirror = (function(){
     }
 
     function changeImg(bigClassName,biggerClassName,smallClassName){
-        $($(`.${smallClassName}`)[1]).css('border','1px solid #31B3EC');
-        for(var i = 0;i < $(`.${smallClassName}`).length;i++){
+        $($('.' + smallClassName)[1]).css('border','1px solid #31B3EC');
+        for(var i = 0;i < $('.' + smallClassName).length;i++){
             (function(n){
-                var smallImg = $($(`.${smallClassName}`)[n]);
+                var smallImg = $($('.' + smallClassName)[n]);
 
                 smallImg.on('click',function(){
                     index = n;
-                    for(var j = 0;j < $(`.${smallClassName}`).length;j++){
-                        $($(`.${smallClassName}`)[j]).css('border','1px solid white');
+                    for(var j = 0;j < $('.' + smallClassName).length;j++){
+                        $($('.' + smallClassName)[j]).css('border','1px solid white');
                     }
                     $(this).css('border','1px solid #31B3EC');
-                    $(`.${bigClassName}`).attr('src',`${$(this).attr('src')}`);
-                    $(`.${biggerClassName}`).attr('src',`${$(this).attr('src')}`);
+                    $('.' + bigClassName).attr('src',$(this).attr('src'));
+                    $('.' + biggerClassName).attr('src',$(this).attr('src'));
                 })
             })(i);
         }
     }
 
     function leftBtnClick(iconClassName,bigClassName,biggerClassName,smallClassName){
-        $(`.${iconClassName}`).on('click',function(){
+        $('.' + iconClassName).on('click',function(){
             if(index === 0){
                 index = 4;
             }else{
                 index--;
             }
 
-            for(var j = 0;j < $(`.${smallClassName}`).length;j++){
-                $($(`.${smallClassName}`)[j]).css('border','1px solid white');
+            for(var j = 0;j < $('.' + smallClassName).length;j++){
+                $($('.' + smallClassName)[j]).css('border','1px solid white');
             }
-            $($(`.${smallClassName}`)[index]).css('border','1px solid #31B3EC');
-            $(`.${bigClassName}`).attr('src',`${$($(`.${smallClassName}`)[index]).attr('src')}`);
-            $(`.${biggerClassName}`).attr('src',`${$($(`.${smallClassName}`)[index]).attr('src')}`);
+            $($('.' + smallClassName)[index]).css('border','1px solid #31B3EC');
+            $('.' + bigClassName).attr('src',$($('.' + smallClassName)[index]).attr('src'));
+            $('.' + biggerClassName).attr('src',$($('.' + smallClassName)[index]).attr('src'));
         })
     }
 
