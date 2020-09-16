@@ -43,9 +43,10 @@ var tabFun = (function(){
             for(var j = 0;j < $('.tab-nav-li').length;j++){
                 (function(k){
                     $($('.tab-nav-li')[k]).on('click',function(){
-                        // if(k === 0){
+                        if(k === 0 || k === 1){
                             login = true;
-                        // }
+                        }
+
                         for(var n = 0;n < $('.tab-nav-li').length;n++){
                             $($('.tab-nav-li')[n]).removeClass('active').css('color','#555555');
                         }
@@ -491,55 +492,94 @@ var tabFun = (function(){
                     'position':'fixed',
                     'top':0
                 });
-                $(".body-tab-content").css('padding-top','42px');
                 $("html,body").animate(
                     {scrollTop: $(".body-tab-content").offset().top},{duration: 500,easing: "swing"}
                 );
+                $(".body-tab-content").css('padding-top','42px');
                 break;
             case 2:
                 $("#body-tab-nav-id").css({
                     'position':'fixed',
                     'top':0
                 });
-                $("html,body").animate(
-                    {scrollTop: $("#youhui").offset().top - 42},{duration: 500,easing: "swing"}
-                );
+                if(login){
+                    $("html,body").animate(
+                        {scrollTop: $("#youhui").offset().top - 42},{duration: 500,easing: "swing"}
+                    );
+                }else{
+                    $("html,body").animate(
+                        {scrollTop: $("#youhui").offset().top},{duration: 500,easing: "swing"}
+                    );
+                    login = true;
+                }
                 break;
             case 3:
                 $("#body-tab-nav-id").css({
                     'position':'fixed',
                     'top':0
                 });
-                $("html,body").animate(
-                    {scrollTop: $("#fuwu").offset().top - 42},{duration: 500,easing: "swing"}
-                );
+                if(login){
+                    $("html,body").animate(
+                        {scrollTop: $("#fuwu").offset().top - 42},{duration: 500,easing: "swing"}
+                    );
+                }else{
+                     $("html,body").animate(
+                        {scrollTop: $("#fuwu").offset().top},{duration: 500,easing: "swing"}
+                    );
+                    login = true;
+                }
                 break;
             case 4:
                 $("#body-tab-nav-id").css({
                     'position':'fixed',
                     'top':0
                 });
-                $("html,body").animate(
-                    {scrollTop: $("#baozhuang").offset().top - 42},{duration: 500,easing: "swing"}
-                );
+                if(login){
+                    $("html,body").animate(
+                        {scrollTop: $("#baozhuang").offset().top - 42},{duration: 500,easing: "swing"}
+                    );
+                }else{
+                    $("html,body").animate(
+                        {scrollTop: $("#baozhuang").offset().top},{duration: 500,easing: "swing"}
+                    );
+                    login = true;
+                }
                 break;
             case 5:
                 $("#body-tab-nav-id").css({
                     'position':'fixed',
                     'top':0
                 });
-                $("html,body").animate(
-                    {scrollTop: $("#baojia").offset().top - 42},{duration: 500,easing: "swing"}
-                );
+                if(login){
+                    $("html,body").animate(
+                        {scrollTop: $("#baojia").offset().top - 42},{duration: 500,easing: "swing"}
+                    );
+                }else{
+                    $("html,body").animate(
+                        {scrollTop: $("#baojia").offset().top},{duration: 500,easing: "swing"}
+                    );
+                    login = true;
+                }
                 break;
             case 6:
                 $("#body-tab-nav-id").css({
                     'position':'fixed',
                     'top':0
                 });
-                $("html,body").animate(
-                    {scrollTop: $("#pingjia").offset().top - 42},{duration: 500,easing: "swing"}
-                );
+                $("#body-tab-nav-id").css({
+                    'position':'fixed',
+                    'top':0
+                });
+                if(login){
+                    $("html,body").animate(
+                        {scrollTop: $("#pingjia").offset().top - 42},{duration: 500,easing: "swing"}
+                    );
+                }else{
+                    $("html,body").animate(
+                        {scrollTop: $("#pingjia").offset().top},{duration: 500,easing: "swing"}
+                    );
+                    login = true;
+                }
                 break;
         }
     }

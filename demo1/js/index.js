@@ -19,6 +19,7 @@ $(function(){
                 'position':'fixed',
                 'top':0
             });
+            $(".body-tab-content").css('padding-top','42px');
         }
         if(top < maxTop){
             nav.css('position','static');

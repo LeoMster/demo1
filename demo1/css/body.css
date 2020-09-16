@@ -296,25 +296,7 @@
     transform: rotate(45deg);
 }
 /* 吸顶 */
-/* .body-tab-nav-box{
-    position: sticky;
-} */
-/* .body-tab-nav{
-    top: 0;
-    z-index: 100;
-} */
-/* .body-tab-nav-id{
-   
-   
-    height: 42px;
-    width: 100%;
-}
-.body-tab-nav-id li{
-    z-index: 100;
-    background-color: red;
-} */
 .body-tab-nav{
-    /* width: 1440px; */
     z-index: 100;
 }
 
