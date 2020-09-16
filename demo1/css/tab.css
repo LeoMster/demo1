@@ -46,6 +46,7 @@
     font-family: NotoSansSC-Regular, NotoSansSC;
     font-weight: 400;
     color: #555555;
+    z-index: 101;
 }
 .active{
     background: #31B3EC;
@@ -217,4 +218,3 @@
     margin-top: -10px;
     margin-bottom: 20px;
 }
-

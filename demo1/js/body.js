@@ -102,7 +102,14 @@ var bodyFun = (function(){
         +   '<span class="body-msg-right-price-title mL10 mT10 mR5">&emsp;&emsp;&emsp;</span>'
         +   result[0].care
         +'</section>'
-        tag = title + isChuan + info + price + net + diy + type + memory + color + num + care;
+
+        var btn = '<section class="body-btn">'
+        + '<span class="body-btn1">立即购买</span>'
+        + '<span class="body-btn2">加入购物车</span>'
+        + '<span class="body-btn3">组合销售</span>'
+        + '</section>';
+
+        tag = title + isChuan + info + price + net + diy + type + memory + color + num + care + btn;
         $('.' + className).html(tag);
 
         setSelected('netUl-li');

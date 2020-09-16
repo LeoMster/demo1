@@ -194,17 +194,17 @@
     color: #FF3D3D;
 }
 .body-btn{
-    height: 42px;
+    height: 70px;
     position: absolute;
-    bottom: 80px;
-    right: 470px;
+    bottom: 15px;
+    left: 0px;
 }
 .body-btn span{
     display: block;
     width: 140px;
     height: 42px;
     float: left;
-    margin: 10px 10px 0 10px;
+    margin: 30px 10px 0 10px;
     line-height: 42px;
     text-align: center;
 }
@@ -296,10 +296,29 @@
     transform: rotate(45deg);
 }
 /* 吸顶 */
-.body-tab-nav-box{
+/* .body-tab-nav-box{
     position: sticky;
-}
-.body-tab-nav{
+} */
+/* .body-tab-nav{
     top: 0;
     z-index: 100;
+} */
+/* .body-tab-nav-id{
+   
+   
+    height: 42px;
+    width: 100%;
+}
+.body-tab-nav-id li{
+    z-index: 100;
+    background-color: red;
+} */
+.body-tab-nav{
+    /* width: 1440px; */
+    z-index: 100;
+}
+
+.body-msg-right-container{
+    height: 600px;
+    position: relative;
 }

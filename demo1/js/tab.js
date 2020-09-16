@@ -43,9 +43,9 @@ var tabFun = (function(){
             for(var j = 0;j < $('.tab-nav-li').length;j++){
                 (function(k){
                     $($('.tab-nav-li')[k]).on('click',function(){
-                        if(k === 0){
+                        // if(k === 0){
                             login = true;
-                        }
+                        // }
                         for(var n = 0;n < $('.tab-nav-li').length;n++){
                             $($('.tab-nav-li')[n]).removeClass('active').css('color','#555555');
                         }
@@ -111,7 +111,7 @@ var tabFun = (function(){
         for(var i = 0;i < content[0].list.length;i++){
             str1 += content[0].list[i].content.join('');
         }
-        var str2 = `${content[1].content}`;
+        var str2 = content[1].content;
 
         return '<section class="setUl2-container setUl3-container">' + title1 + str1 + '</section>' + '<section class="setUl2-container setUl3-container setUl3-container2">' + title2 + str2 + '</section>';
     }
@@ -198,7 +198,7 @@ var tabFun = (function(){
         }
     }
 
-    async function setTab(result,className,id){
+    function setTab(result,className,id){
         var tag;
         switch(id){
             case 0:
@@ -487,31 +487,56 @@ var tabFun = (function(){
     function scrollTop(id){
         switch(id){
             case 0:
+                $("#body-tab-nav-id").css({
+                    'position':'fixed',
+                    'top':0
+                });
+                $(".body-tab-content").css('padding-top','42px');
                 $("html,body").animate(
-                    {scrollTop: $(".body-tab-content").offset().top - 42},{duration: 500,easing: "swing"}
+                    {scrollTop: $(".body-tab-content").offset().top},{duration: 500,easing: "swing"}
                 );
                 break;
             case 2:
+                $("#body-tab-nav-id").css({
+                    'position':'fixed',
+                    'top':0
+                });
                 $("html,body").animate(
                     {scrollTop: $("#youhui").offset().top - 42},{duration: 500,easing: "swing"}
                 );
                 break;
             case 3:
+                $("#body-tab-nav-id").css({
+                    'position':'fixed',
+                    'top':0
+                });
                 $("html,body").animate(
                     {scrollTop: $("#fuwu").offset().top - 42},{duration: 500,easing: "swing"}
                 );
                 break;
             case 4:
+                $("#body-tab-nav-id").css({
+                    'position':'fixed',
+                    'top':0
+                });
                 $("html,body").animate(
                     {scrollTop: $("#baozhuang").offset().top - 42},{duration: 500,easing: "swing"}
                 );
                 break;
             case 5:
+                $("#body-tab-nav-id").css({
+                    'position':'fixed',
+                    'top':0
+                });
                 $("html,body").animate(
                     {scrollTop: $("#baojia").offset().top - 42},{duration: 500,easing: "swing"}
                 );
                 break;
             case 6:
+                $("#body-tab-nav-id").css({
+                    'position':'fixed',
+                    'top':0
+                });
                 $("html,body").animate(
                     {scrollTop: $("#pingjia").offset().top - 42},{duration: 500,easing: "swing"}
                 );
